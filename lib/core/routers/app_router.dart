@@ -7,7 +7,7 @@ import 'package:rcb_cubit_search/features/home/presentation/pages/home_screen.da
 import 'package:rcb_cubit_search/features/home/presentation/pages/user_details_screen.dart';
 import 'package:rcb_cubit_search/features/login/presentation/pages/login_screen.dart';
 import 'package:rcb_cubit_search/features/settings/presentation/pages/settings_screen.dart';
-import 'package:rcb_cubit_search/features/splash/presentation/splash_screen.dart';
+import 'package:rcb_cubit_search/features/splash/presentation/pages/splash_screen.dart';
 import '../../features/home/domain/user.dart';
 
 class AppRouter {
