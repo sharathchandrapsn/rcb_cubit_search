@@ -1,22 +1,21 @@
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
-import 'package:rcb_cubit_search/features/home/data/user_repository_impl.dart';
 import 'package:rcb_cubit_search/features/home/domain/user.dart';
+import 'package:rcb_cubit_search/features/home/domain/user_repository.dart';
 
 part 'user_state.dart';
 
 class UserCubit extends Cubit<UserState> {
-  UserCubit(this.userRepositoryImpl) : super(UserInitial());
-  final UserRepositoryImpl userRepositoryImpl;
+  UserCubit(this.userRepository) : super(UserInitial());
+  final UserRepository userRepository;
 
   List<User> users = [];
 
   Future<void> fetchUsers() async {
     emit(UserLoading());
     try {
-      users = await userRepositoryImpl.fetchUsers();
+      users = await userRepository.fetchUsers();
       log("users1 are:: $users");
       emit(UserSuccess(users));
     } catch (e) {

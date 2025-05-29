@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:rcb_cubit_search/core/widgets/drawer_widget.dart';
 import 'package:rcb_cubit_search/features/home/data/user_repository_impl.dart';
 import 'package:rcb_cubit_search/features/home/domain/user.dart';
 import '../cubit/user_cubit.dart';
@@ -10,9 +11,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("RCB Players")),
-      body: Column(
+    return ScaffoldWithDrawer(
+      appbarTitle: "RCB Players",
+      child: Column(
         children: [
           Padding(
             padding: const EdgeInsets.all(12.0),
