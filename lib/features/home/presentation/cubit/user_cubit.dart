@@ -41,4 +41,11 @@ class UserCubit extends Cubit<UserState> {
       emit(UserFailure(e.toString()));
     }
   }
+
+  selectItem(int index) {
+    if (state is UserSuccess) {
+      final successState = state as UserSuccess;
+      emit(UserSuccess(successState.users, itemId: index));
+    }
+  }
 }

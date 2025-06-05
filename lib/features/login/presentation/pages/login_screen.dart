@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:rcb_cubit_search/core/widgets/drawer_widget.dart';
 import 'package:rcb_cubit_search/features/login/presentation/cubit/login_cubit.dart';
 
 class LoginScreen extends StatefulWidget {

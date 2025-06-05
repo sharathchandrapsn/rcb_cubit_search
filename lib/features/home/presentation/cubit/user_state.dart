@@ -8,12 +8,14 @@ final class UserLoading extends UserState {}
 
 final class UserSuccess extends UserState {
   final List<User> users;
-  UserSuccess(this.users);
+  final int? itemId;
+  UserSuccess(this.users, {this.itemId});
 }
 
 final class UserFilteredState extends UserState {
   final List<User> filteredUsers;
-  UserFilteredState(this.filteredUsers);
+  final int? itemId;
+  UserFilteredState(this.filteredUsers, {this.itemId});
 }
 
 final class UserFailure extends UserState {
